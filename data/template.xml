@@ -1,0 +1,696 @@
+<?xml version="1.0"?>
+
+<template>
+    <meta>
+        <author>James Hendrie</author>
+        <version>1.0</version>
+        <date>2018-05-08</date>
+        <comment>Copied from the web, a few extra fields added</comment>
+    </meta>
+
+    <tab>
+
+        <title>Basics</title>
+
+        <row>
+            <field>
+                <name>Name</name>
+                <type>short</type>
+                <align>vertical</align>
+                <tip>The character's name!</tip>
+            </field>
+            
+            <field>
+                <name>Age</name>
+                <type>short</type>
+                <align>vertical</align>
+            </field>
+            
+            <field>
+                <name>Nationality</name>
+                <type>short</type>
+                <align>vertical</align>
+            </field>
+        </row>
+
+        <row>
+            
+            <field>
+                <name>Socioeconomic Level as a child</name>
+                <type>short</type>
+                <align>vertical</align>
+            </field>
+            
+            <field>
+                <name>Socioeconomic Level as an adult</name>
+                <type>short</type>
+                <align>vertical</align>
+            </field>
+
+        </row>
+
+        <row>
+            
+            <field>
+                <name>Birthplace</name>
+                <type>short</type>
+                <align>vertical</align>
+            </field>
+            
+            <field>
+                <name>Current Residence</name>
+                <type>short</type>
+                <align>vertical</align>
+            </field>
+
+        </row>
+
+        <row>
+            
+            <field>
+                <name>Occupation</name>
+                <type>short</type>
+                <align>vertical</align>
+            </field>
+            
+            <field>
+                <name>Wealth</name>
+                <type>short</type>
+                <align>vertical</align>
+            </field>
+
+        </row>
+
+        <row>
+            
+            <field>
+                <name>Talents / Skills</name>
+                <type>long</type>
+                <align>vertical</align>
+            </field>
+
+        </row>
+
+    </tab>
+
+    <tab>
+        <title>Relationships</title>
+
+        <row>
+            
+            <field>
+                <name>Birth Order (describe relationship)</name>
+                <type>short</type>
+                <align>vertical</align>
+            </field>
+
+        </row>
+
+        <row>
+            
+            <field>
+                <name>Siblings (describe relationship)</name>
+                <type>long</type>
+                <align>vertical</align>
+            </field>
+            
+            <field>
+                <name>Significant Others (describe relationship)</name>
+                <type>long</type>
+                <align>vertical</align>
+            </field>
+
+        </row>
+
+        <row>
+            
+            <field>
+                <name>Children (describe relationship)</name>
+                <type>long</type>
+                <align>vertical</align>
+            </field>
+            
+            <field>
+                <name>Grandparents (describe relationship)</name>
+                <type>long</type>
+                <align>vertical</align>
+            </field>
+
+        </row>
+
+        <row>
+            
+            <field>
+                <name>Grandchildren (describe relationship)</name>
+                <type>long</type>
+                <align>vertical</align>
+            </field>
+            
+            <field>
+                <name>Relationship skills</name>
+                <type>long</type>
+                <align>vertical</align>
+            </field>
+
+        </row>
+
+    </tab>
+
+    <tab>
+
+        <title>Physical</title>
+
+        <row>
+
+            <field>
+                <name>Height</name>
+                <type>short</type>
+                <align>vertical</align>
+            </field>
+
+            <field>
+                <name>Weight</name>
+                <type>short</type>
+                <align>vertical</align>
+            </field>
+
+            <field>
+                <name>Race</name>
+                <type>short</type>
+                <align>vertical</align>
+            </field>
+
+        </row>
+
+        <row>
+
+            <field>
+                <name>Eye color</name>
+                <type>short</type>
+                <align>vertical</align>
+            </field>
+
+            <field>
+                <name>Hair color</name>
+                <type>short</type>
+                <align>vertical</align>
+            </field>
+
+            <field>
+                <name>Skin color</name>
+                <type>short</type>
+                <align>vertical</align>
+            </field>
+
+        </row>
+
+        <row>
+
+            <field>
+                <name>Glasses or contacts?</name>
+                <type>short</type>
+                <align>vertical</align>
+            </field>
+
+            <field>
+                <name>General health</name>
+                <type>short</type>
+                <align>vertical</align>
+            </field>
+
+        </row>
+
+        <row>
+
+            <field>
+                <name>Stature</name>
+                <type>short</type>
+                <align>vertical</align>
+            </field>
+
+            <field>
+                <name>Musculature / conditioning</name>
+                <type>short</type>
+                <align>vertical</align>
+            </field>
+
+        </row>
+
+        <row>
+
+            <field>
+                <name>Upper body description</name>
+                <type>long</type>
+                <align>vertical</align>
+            </field>
+
+            <field>
+                <name>Lower body description</name>
+                <type>long</type>
+                <align>vertical</align>
+            </field>
+
+        </row>
+
+        <row>
+
+            <field>
+                <name>Face description (shape, etc.)</name>
+                <type>long</type>
+                <align>vertical</align>
+            </field>
+
+            <field>
+                <name>Distinguishing features</name>
+                <type>long</type>
+                <align>vertical</align>
+            </field>
+
+        </row>
+
+    </tab>
+
+    <tab>
+
+        <title>Peculiarities</title>
+
+        <row>
+
+            <field>
+                <name>Habits (smoking, drinking, etc.)</name>
+                <type>short</type>
+                <align>vertical</align>
+            </field>
+
+            <field>
+                <name>Disabilities</name>
+                <type>short</type>
+                <align>vertical</align>
+            </field>
+
+        </row>
+
+        <row>
+
+            <field>
+                <name>Mannerisms</name>
+                <type>long</type>
+                <align>vertical</align>
+            </field>
+
+            <field>
+                <name>Hobbies</name>
+                <type>long</type>
+                <align>vertical</align>
+            </field>
+
+        </row>
+
+        <row>
+
+            <field>
+                <name>Favorite sayings</name>
+                <type>long</type>
+                <align>vertical</align>
+            </field>
+
+            <field>
+                <name>Speech patterns</name>
+                <type>long</type>
+                <align>vertical</align>
+            </field>
+
+        </row>
+
+        <row>
+
+            <field>
+                <name>Manner of dress</name>
+                <type>short</type>
+                <align>vertical</align>
+            </field>
+
+            <field>
+                <name>Presentation (Elegant, shabby, etc.)</name>
+                <type>short</type>
+                <align>vertical</align>
+            </field>
+
+        </row>
+
+        <row>
+
+            <field>
+                <name>Greatest flaw</name>
+                <type>long</type>
+                <align>vertical</align>
+            </field>
+
+            <field>
+                <name>Best quality</name>
+                <type>long</type>
+                <align>vertical</align>
+            </field>
+
+        </row>
+
+    </tab>
+
+    <tab>
+
+        <title>Personality/Education</title>
+
+        <row>
+
+            <field>
+                <name>Educational background</name>
+                <type>short</type>
+                <align>vertical</align>
+            </field>
+
+            <field>
+                <name>Intelligence level</name>
+                <type>short</type>
+                <align>vertical</align>
+            </field>
+
+            <field>
+                <name>Mental illnesses</name>
+                <type>short</type>
+                <align>vertical</align>
+            </field>
+
+        </row>
+        <row>
+
+            <field>
+                <name>Learning experiences</name>
+                <type>long</type>
+                <align>vertical</align>
+            </field>
+
+            <field>
+                <name>Short-term goals in life</name>
+                <type>long</type>
+                <align>vertical</align>
+            </field>
+
+            <field>
+                <name>Long-term goals in life</name>
+                <type>long</type>
+                <align>vertical</align>
+            </field>
+
+        </row>
+        <row>
+
+            <field>
+                <name>How he/she views him/herself</name>
+                <type>long</type>
+                <align>vertical</align>
+            </field>
+
+            <field>
+                <name>How they believes others perceive them</name>
+                <type>long</type>
+                <align>vertical</align>
+            </field>
+
+        </row>
+        <row>
+
+            <field>
+                <name>How self-confident are they?</name>
+                <type>short</type>
+                <align>vertical</align>
+            </field>
+
+            <field>
+                <name>Ruled by logic or emotion</name>
+                <type>short</type>
+                <align>vertical</align>
+            </field>
+
+        </row>
+        <row>
+
+            <field>
+                <name>What would most embarrass them?</name>
+                <type>long</type>
+                <align>vertical</align>
+            </field>
+
+        </row>
+    </tab>
+
+    <tab>
+        
+        <title>Emotional</title>
+
+        <row>
+
+            <field>
+                <name>Strengths</name>
+                <type>long</type>
+                <align>vertical</align>
+            </field>
+
+            <field>
+                <name>Weaknesses</name>
+                <type>long</type>
+                <align>vertical</align>
+            </field>
+
+        </row>
+        <row>
+
+            <field>
+                <name>How does the character deal with anger?</name>
+                <type>short</type>
+                <align>vertical</align>
+            </field>
+
+            <field>
+                <name>How does the character deal with sadness?</name>
+                <type>short</type>
+                <align>vertical</align>
+            </field>
+
+            <field>
+                <name>How does the character deal with conflict?</name>
+                <type>short</type>
+                <align>vertical</align>
+            </field>
+
+        </row>
+        <row>
+
+            <field>
+                <name>How does the character deal with change?</name>
+                <type>short</type>
+                <align>vertical</align>
+            </field>
+
+            <field>
+                <name>How does the character deal with loss?</name>
+                <type>short</type>
+                <align>vertical</align>
+            </field>
+
+        </row>
+        <row>
+
+            <field>
+                <name>What do they want out of life?</name>
+                <type>long</type>
+                <align>vertical</align>
+            </field>
+
+            <field>
+                <name>What would they like to change in their life?</name>
+                <type>long</type>
+                <align>vertical</align>
+            </field>
+
+        </row>
+        <row>
+
+            <field>
+                <name>What motivates them?</name>
+                <type>short</type>
+                <align>vertical</align>
+            </field>
+
+            <field>
+                <name>What frightens them?</name>
+                <type>short</type>
+                <align>vertical</align>
+            </field>
+
+        </row>
+        <row>
+
+            <field>
+                <name>What makes them happy?</name>
+                <type>short</type>
+                <align>vertical</align>
+            </field>
+
+            <field>
+                <name>Are they judgemental of others?</name>
+                <type>short</type>
+                <align>vertical</align>
+            </field>
+
+        </row>
+        <row>
+
+            <field>
+                <name>Introvert or Extrovert</name>
+                <type>choice</type>
+                <align>vertical</align>
+                <choice>Introvert</choice>
+                <choice>Extrovert</choice>
+            </field>
+
+            <field>
+                <name>Generous or stingy</name>
+                <type>choice</type>
+                <align>vertical</align>
+                <choice>Generous</choice>
+                <choice>Stingy</choice>
+            </field>
+
+            <field>
+                <name>Generally polite or rude</name>
+                <type>choice</type>
+                <align>vertical</align>
+                <choice>Polite</choice>
+                <choice>Rude</choice>
+            </field>
+
+        </row>
+
+    </tab>
+
+    <tab>
+
+        <title>Spirituality</title>
+
+        <row>
+
+            <field>
+                <name>Do they believe in God?</name>
+                <type>choice</type>
+                <align>vertical</align>
+                <choice>Yes</choice>
+                <choice>No</choice>
+            </field>
+
+        </row>
+        <row>
+
+            <field>
+                <name>What are the character's spiritual beliefs?</name>
+                <type>long</type>
+                <align>vertical</align>
+            </field>
+
+        </row>
+        <row>
+
+            <field>
+                <name>Is religion/sprituality a part of their life?</name>
+                <type>choice</type>
+                <align>vertical</align>
+                <choice>Yes</choice>
+                <choice>No</choice>
+            </field>
+
+        </row>
+        <row>
+
+            <field>
+                <name>If so, what role does it play?</name>
+                <type>long</type>
+                <align>vertical</align>
+            </field>
+
+        </row>
+
+    </tab>
+
+    <tab>
+        <title>Role</title>
+
+        <row>
+
+            <field>
+                <name>Character's role in the story</name>
+                <type>short</type>
+                <align>vertical</align>
+            </field>
+
+            <field>
+                <name>Where they first appear in story</name>
+                <type>short</type>
+                <align>vertical</align>
+            </field>
+
+        </row>
+        <row>
+
+            <field>
+                <name>Describe this and another character's relationship</name>
+                <type>long</type>
+                <align>vertical</align>
+            </field>
+
+            <field>
+                <name>Describe this and another character's relationship</name>
+                <type>long</type>
+                <align>vertical</align>
+            </field>
+
+        </row>
+        <row>
+
+            <field>
+                <name>Describe this and another character's relationship</name>
+                <type>long</type>
+                <align>vertical</align>
+            </field>
+
+            <field>
+                <name>Describe this and another character's relationship</name>
+                <type>long</type>
+                <align>vertical</align>
+            </field>
+
+        </row>
+        <row>
+
+            <field>
+                <name>How are they different at the end of the story?</name>
+                <type>long</type>
+                <align>vertical</align>
+            </field>
+
+        </row>
+
+    </tab>
+
+    <tab>
+        <title>Notes</title>
+
+        <row>
+            <field>
+                <name>Additional notes on the character</name>
+                <type>long</type>
+                <align>vertical</align>
+            </field>
+        </row>
+
+    </tab>
+
+</template>

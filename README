@@ -1,0 +1,63 @@
+================================================================================
+    qCharDev    |   version 0.90    |   GPL v3              |   2018-05-08
+    James Hendrie                   |   hendrie dot james at gmail dot com
+================================================================================
+
+    1.  Description
+    2.  Requirements
+    3.  Usage
+    4.  Contact, etc.
+
+
+
+----------------------------------------
+    1.  Description
+----------------------------------------
+
+    qCharDev is an application that will, ostensibly, help you develop
+    characters for your fiction.  It does this by providing a number of fields
+    per character to be filled out, copied from a character development
+    worksheet into a template file.  These can then later be exported to PDF,
+    assuming you've got the reportlab library installed.
+
+    The default template is located at ./data/template.xml.  You can import
+    other custom templates if you want, provided they're formated correctly;
+    glance over the default template to see how it's doe if you want to make
+    your own.
+
+
+
+
+
+----------------------------------------
+    2.  Requirements
+----------------------------------------
+
+    -   Python 3 (tested:  version 3.6.5)
+    -   PyQt5 (python-pyqt5) for Python 3 (tested:  version 5.10.1-2)
+    -   reportlab (python-reportlab) for Python 3 (tested: version 3.4.0-1)
+        - Can be skipped if you don't care about PDF export
+
+
+
+----------------------------------------
+    4.  Usage
+----------------------------------------
+
+Usage:  ./qCharDev.sh
+
+
+
+----------------------------------------
+    5.  Contact, etc.
+----------------------------------------
+
+    Author:
+        James Hendrie
+        hendrie.james@gmail.com
+        hendrie.james@protonmail.com
+
+    Sites:
+        http://www.someplacedumb.net/content/progs
+        https://github.com/jahendrie
+            https://github.com/jahendrie/qchardev    <-- This program!
