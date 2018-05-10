@@ -1,7 +1,86 @@
 from PyQt5.QtWidgets import ( QWidget, QLineEdit, QTextEdit, QLabel,
-        QRadioButton, QCheckBox, QHBoxLayout, QVBoxLayout )
+        QRadioButton, QCheckBox, QPushButton, QHBoxLayout, QVBoxLayout,
+        QFileDialog )
+
+from PyQt5.QtGui import QIcon, QPixmap
+from PyQt5.QtCore import Qt
 
 from functools import partial
+
+from util import *
+from icons import Icons
+
+
+
+class ImageButton( QWidget ):
+    def __init__( self, parent ):
+
+        super().__init__()
+        self.parent = parent
+        self.index = -1
+        self.path = "(None selected)"
+        self.init_UI()
+
+
+    def init_UI( self ):
+
+        ##  Laziness
+        get_icon = Icons().get_icon
+
+        self.label = QLabel( self.path )
+        self.pix = None
+        self.iLabel = QLabel()
+
+        self.btn = QPushButton( QIcon( get_icon( "document-open" ) ), "" )
+        self.btn.clicked.connect( self.get_image )
+
+        hbox = QHBoxLayout()
+        hbox.addWidget( self.btn )
+        hbox.addWidget( self.label, 1 )
+
+        vbox = QVBoxLayout()
+        vbox.addLayout( hbox )
+        vbox.addWidget( self.iLabel )
+
+        self.setLayout( vbox )
+
+
+    def get_image( self ):
+
+        path, ign = QFileDialog.getOpenFileName( self, "Choose image",
+                get_data_dir() )
+
+        if path != "":
+            self.path = path
+            self.label.setText( self.path )
+
+            self.load_pix( self.path )
+            self.parent.image_clicked( self.index, self.path )
+
+    def load_pix( self, path ):
+
+            self.pix = QPixmap( path )
+            p = self.pix.scaledToHeight(WINDOW_HEIGHT/2,Qt.SmoothTransformation)
+            self.iLabel.setPixmap( p )
+
+    def get_width( self ):
+        return( self.iLabel.pixmap().width() )
+
+    def get_height( self ):
+        return( self.iLabel.pixmap().height() )
+
+    def reload( self, path ):
+
+        self.path = path
+        self.label.setText( path )
+        self.load_pix( self.path )
+
+    def clear( self ):
+        self.path = "(None selected)"
+        self.pix = None
+        self.label.clear()
+        self.iLabel.clear()
+
 
 
 class RadioWidget( QWidget ):
@@ -138,9 +217,9 @@ class Tab( QWidget ):
 
     def parse_field( self, field ):
 
-        name = field.find( "name" ).text
-        wType = field.find( "type" ).text
-        align = field.find( "align" ).text
+        name = ( field.find( "name" ).text ).strip()
+        wType = ( field.find( "type" ).text ).strip()
+        align = ( field.find( "align" ).text ).strip()
 
         ##  Type
         choices = []
@@ -148,7 +227,7 @@ class Tab( QWidget ):
             choices.append( choice.text )
 
         widget = self.get_widget_by_type( wType.lower(), choices )
-        if type( widget ) == RadioWidget:
+        if type( widget ) == RadioWidget or type( widget ) == ImageButton:
             widget.index = len( self.widgets )
 
         ##  Set the tooltip
@@ -194,6 +273,11 @@ class Tab( QWidget ):
             elif type( widget ) == RadioWidget:
                 widget.set_checked( field[ "value" ] )
 
+            elif type( widget ) == ImageButton:
+                widget.reload( field[ "value" ] )
+                field[ "width" ] = widget.get_width()
+                field[ "height" ] = widget.get_height()
+
             idx += 1
 
 
@@ -205,6 +289,8 @@ class Tab( QWidget ):
                 w.clear()
             elif type( w ) == RadioWidget:
                 w.clear_buttons()
+            elif type( w ) == ImageButton:
+                w.clear()
 
 
     def get_widget_by_type( self, wType, choices = None ):
@@ -218,6 +304,9 @@ class Tab( QWidget ):
         elif wType == "radio" or wType == "choice":
             return( RadioWidget( self, choices ) )
 
+        elif wType == "image" or wType == "img":
+            return( ImageButton( self ))
+
     def radio_clicked( self, index, val ):
         char = self.parent.characters[ self.parent.charIndex ]
         tab = char.tabs[ self.index ]
@@ -227,6 +316,15 @@ class Tab( QWidget ):
         #tab = char.tabs[ self.index ]
 
         tab.fields[ index ][ "value" ] = val
+
+    def image_clicked( self, index, val ):
+        char = self.parent.characters[ self.parent.charIndex ]
+        tab = char.tabs[ self.index ]
+        widget = self.widgets[ index ]
+
+        tab.fields[ index ][ "value" ] = val
+        tab.fields[ index ][ "width" ] = widget.get_width()
+        tab.fields[ index ][ "height" ] = widget.get_height()
 
 
 

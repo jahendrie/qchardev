@@ -73,14 +73,35 @@ def make_tab( tab, story ):
 
         ##  Skip the field if it doesn't have a value
         if field[ "value" ] != None and field[ "value" ] != "":
+            if field[ "type" ] == "image" or field[ "type" ] == "img":
+                pt = "<font size=%s>%s</font><br/>" % (fName[1],field[ "name" ])
+                story.append( Paragraph( pt, styles[ "Normal" ]) )
+                story.append( Spacer( 1, 16 ))
 
-            pt = "<font size=%s>%s</font><br/>" % ( fName[1], field[ "name" ] )
-            story.append( Paragraph( pt, styles[ "Normal" ]) )
-            story.append( Spacer( 1, 16 ))
+                img = get_image( field, inch*3 )
+                story.append( img )
 
-            pt = "<font size=%s>%s</font><br/>" % ( fValue[1], field[ "value" ])
-            story.append( Paragraph( pt, styles[ "Normal" ]) )
-            story.append( Spacer( 1, 30 ))
+            else:
+                pt = "<font size=%s>%s</font><br/>" % (fName[1],field[ "name" ])
+                story.append( Paragraph( pt, styles[ "Normal" ]) )
+                story.append( Spacer( 1, 16 ))
+
+                pt = "<font size=%s>%s</font><br/>" % (fValue[1],field["value"])
+                story.append( Paragraph( pt, styles[ "Normal" ]) )
+                story.append( Spacer( 1, 30 ))
+
+
+
+def get_image( field, width ):
+
+    w = float( field[ "width" ] )
+    h = float( field[ "height" ] )
+    ratio = h/w
+
+    img = Image( field[ "value" ], width=width, height=( width * ratio ))
+
+    return( img )
+
 
 
 def get_number_of_values( tab ):

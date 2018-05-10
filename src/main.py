@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 #===============================================================================
-#   qCharDev    |   version 0.90    |   GPL v3      |   2018-05-03
+#   qCharDev    |   version 0.91    |   GPL v3      |   2018-05-10
 #   James Hendrie                   |   hendrie.james@gmail.com
 #
 #   PyQt5 character developer
 #
 #   ---------------------------------------------------------------------------
 #
-#    Copyright (C) 2017, 2018 James Hendrie
+#    Copyright (C) 2018 James Hendrie
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by

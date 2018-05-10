@@ -4,7 +4,7 @@ import sys, os
 WINDOW_WIDTH = 1280
 WINDOW_HEIGHT = 800
 
-VERSION = "0.90"
+VERSION = "0.91"
 
 
 

@@ -3,8 +3,8 @@
 <template>
     <meta>
         <author>James Hendrie</author>
-        <version>1.0</version>
-        <date>2018-05-08</date>
+        <version>1.1</version>
+        <date>2018-05-10</date>
         <comment>Copied from the web, a few extra fields added</comment>
     </meta>
 
@@ -107,15 +107,15 @@
         </row>
 
         <row>
-            
+
             <field>
-                <name>Siblings (describe relationship)</name>
+                <name>Parents (describe relationship)</name>
                 <type>long</type>
                 <align>vertical</align>
             </field>
-            
+
             <field>
-                <name>Significant Others (describe relationship)</name>
+                <name>Siblings (describe relationship)</name>
                 <type>long</type>
                 <align>vertical</align>
             </field>
@@ -135,13 +135,19 @@
                 <type>long</type>
                 <align>vertical</align>
             </field>
+            
+            <field>
+                <name>Grandchildren (describe relationship)</name>
+                <type>long</type>
+                <align>vertical</align>
+            </field>
 
         </row>
 
         <row>
             
             <field>
-                <name>Grandchildren (describe relationship)</name>
+                <name>Significant Others (describe relationship)</name>
                 <type>long</type>
                 <align>vertical</align>
             </field>
@@ -669,6 +675,13 @@
 
         </row>
         <row>
+            <field>
+                <name>
+                    What situation do they find themselves in at the beginning of the story?
+                </name>
+                <type>long</type>
+                <align>vertical</align>
+            </field>
 
             <field>
                 <name>How are they different at the end of the story?</name>
@@ -681,13 +694,21 @@
     </tab>
 
     <tab>
-        <title>Notes</title>
+        <title>Misc</title>
 
         <row>
             <field>
                 <name>Additional notes on the character</name>
                 <type>long</type>
                 <align>vertical</align>
+            </field>
+        </row>
+
+        <row>
+            <field>
+                <name>Character image</name>
+                <type>image</type>
+                <align>horizontal</align>
             </field>
         </row>
 
